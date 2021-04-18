@@ -1,0 +1,24 @@
+{
+  "name": "bash-academy",
+  "version": "0.0.0",
+  "description": "A website to help people learn about Linux.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickBurnett/bash-academy.git"
+  },
+  "author": "Nicolas Burnett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickBurnett/bash-academy/issues"
+  },
+  "homepage": "https://github.com/NickBurnett/bash-academy#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
