@@ -1,0 +1,57 @@
+@import url('./index.css');
+#navigation {
+    margin: 0;
+    padding: 0 3vw;
+}
+.nav-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    color: var(--color2);
+    user-select: none;
+}
+.nav-item {
+    --size: 2vw;
+    margin: 1vw 1.5vw;
+    padding: 1vw;
+    display: block;
+    float: right;
+    font-size: var(--size);
+    font-weight: bolder;
+    background-color: transparent;
+    animation: fade-in 1s calc(var(--i) * 0.7s + 0.3s);
+    transition: color 0.25s, background-color 0.25s, border-radius 0.25s;
+}
+.nav-item:nth-of-type(2) {
+    margin-left: auto;
+}
+.nav-item:hover {
+    cursor: pointer;
+    color: var(--color4);
+    background-color: var(--color2t);
+    border-radius: 20px;
+    transition: color 0.5s, background-color 0.5s;
+}
+.nav-logo-token:hover {
+    cursor: inherit;
+    background-color: transparent;
+    border-radius: inherit;
+    color: inherit;
+}
+.nav-logo {
+    --scale: calc(var(--size) + 1.3vw);
+    float: left;
+    width: var(--scale);
+    height: var(--scale);
+}
+.nav-logo:hover {
+    cursor: pointer;
+    color: var(--color4);
+    background-color: transparent;
+    animation: jiggle 0.65s infinite;
+    transition: color 0.25s;
+}

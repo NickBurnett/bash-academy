@@ -1,3 +1,57 @@
-p {
-    color: blue;
+:root {
+    --black-a: #000000;
+    --black-b: #191923;
+    --black-bt: #1c1c2eb4;
+    --black-c: #0e0e13;
+    --white-a: #ffffff;
+    --white-b: #f4fAff;
+    --green-a: #29bf12;
+    --green-b: #8ffc7e;
+    --green-c: #5bff42;
+
+    --dark0-a: var(--black-a);
+    --dark0-b: var(--black-b);
+    --dark0-c: var(--black-c);
+    --dark1-a: var(--white-a);
+    --dark1-b: var(--white-b);
+    --dark1-bt: var(--black-bt);
+    --dark2-a: var(--green-a);
+    --dark2-b: var(--green-b);
+    --dark2-c: var(--green-c);
+
+    --colorbg: var(--dark0-c);
+    --color0: var(--dark0-a);
+    --color1: var(--dark1-a);
+    --color2: var(--dark1-b);
+    --color2t: var(--dark1-bt);
+    --color3: var(--dark2-a);
+    --color4: var(--dark2-b);
+    --color5: var(--dark2-c);
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--colorbg);
+}
+body::-webkit-scrollbar {
+    width: 7px;
+}
+.hidden {
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    from {
+        transform: translateY(-5vw);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes jiggle {
+    10% { transform: rotate(0deg); }
+    33% { transform: rotate(-5deg); }
+    66% { transform: rotate(5deg); }
+    99% { transform: rotate(0deg); }
 }
