@@ -1,11 +1,11 @@
 @import url('./index.css');
 #navigation {
+    top: 0;
     --size: 2rem;
-    --width: min(4rem, 80px);
     position: fixed;
     margin: 0;
     padding: 0;
-    width: var(--width);
+    width: var(--nav-width);
     height: 100vh;
     background-color: var(--black-d);
     box-shadow: 4px 0 10px -3px #010101;
@@ -13,44 +13,58 @@
 #nav-logo {
     margin: 0;
     padding: 0;
-    width: var(--width);
-    height: var(--width);
+    width: var(--nav-width);
+    height: var(--nav-width);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom right, var(--red-c), var(--red-b) 80%);
+    background: var(--gradient-a);
     color: var(--white-a);
+    user-select: none;
+}
+#nav-logo svg, #nav-logo div {
+    transition: transform 0.3s;
 }
 #nav-logo:hover {
     cursor: pointer;
 }
+#nav-logo:hover svg, #nav-logo:hover div {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
 #nav-list {
-    margin: 0;
+    margin-top: 20px;
     padding: 0;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     list-style: none;
-    width: var(--width);
+    width: var(--nav-width);
     color: var(--white-a);
     user-select: none;
 }
 .nav-item {
-    margin: 20px 0;
+    margin: 25px 0;
     padding: 0;
+    opacity: 0;
     display: inline-block;
+    animation: fade-in 0.4s calc(var(--i) * 0.4s + 0.3s);
+    animation-fill-mode: forwards;
+}
+.nav-item svg {
     width: var(--size);
     height: var(--size);
     color: var(--gray-a);
-    animation: fade-in 0.4s calc(var(--i) * 0.4s + 0.3s);
-    transition: color 0.3s;
+    transform: scale(1);
+    transition: color 0.3s, transform 0.3s;
 }
-.nav-item:hover {
+.nav-item svg:hover {
     cursor: pointer;
     color: var(--red-c);
-    transition: color 0.3s;
+    transform: scale(1.1);
+    transition: color 0.3s, transform 0.3s;
 }
 .nav-item-text {
     position: absolute;
@@ -67,7 +81,7 @@
     transform: translateX(20px);
     transition: opacity 0.3s;
 }
-.nav-item:hover .nav-item-text {
+.nav-item svg:hover ~ .nav-item-text {
     opacity: 1;
     transition: opacity 0.3s;
 }

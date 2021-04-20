@@ -5,7 +5,8 @@ const { webpack } = require('webpack')
 module.exports = {
     entry: './src/index.js',
     devServer: {
-        port: 3000
+        port: 3000,
+        historyApiFallback: true
     },
     output: {
         path: path.join(__dirname, '../build/static'),
