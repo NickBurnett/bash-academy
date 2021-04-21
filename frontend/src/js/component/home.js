@@ -31,8 +31,8 @@ export default class Home extends Component {
     render() {
         const info = [
             <HomeInfo i='0' key='0' title='Learn it all' desc={[ 'Linux command-line', 'Linux architecture', 'Software Development in Linux' ]}/>,
-            <HomeInfo i='1' key='1' title='Learn by doing' desc={[ 'Interactive lessons' ]}/>,
-            <HomeInfo i='2' key='2' title='Learn at your pace' desc={[ 'Self-paced lessons', 'Tons of resources', 'No time-limit' ]}/>
+            <HomeInfo i='1' key='1' title='Learn by doing' desc={[ 'Interactive lessons', 'Accurately simulated environments', 'Practical problem sets' ]}/>,
+            <HomeInfo i='2' key='2' title='Customize your learning' desc={[ 'Lesson tracking', 'Weekly reports', 'Live updates' ]}/>
         ]
         return (
             <div id='home-page'>

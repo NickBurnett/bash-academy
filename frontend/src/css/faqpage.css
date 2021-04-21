@@ -1,0 +1,53 @@
+@import url('./index.css');
+#faq-page {
+    margin: 0;
+    padding: 0;
+}
+#faq-title {
+    margin: 10px 0 5px;
+    font-size: 6rem;
+    text-align: center;
+    color: var(--white-a);
+}
+.faq-title-text {
+    display: inline-block;
+    opacity: 0;
+    animation: fade-in 0.3s calc(var(--i) * 0.1s);
+    animation-fill-mode: forwards;
+}
+#faq-list {
+    margin: 5rem 1rem 0;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.faq-item {
+    --width: 26rem;
+    display: inline-block;
+    margin: 20px;
+    padding: 15px;
+    width: var(--width);
+    background-color: var(--black-e);
+    color: var(--white-a);
+    border-radius: 15px;
+    box-shadow: 8px 8px 7px -3px #010101;
+    opacity: 0;
+    animation: fade-in 0.2s calc(var(--i) * 0.1s + 0.3s);
+    animation-fill-mode: forwards;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+.faq-item-q {
+    font-size: 2rem;
+}
+.faq-item-a {
+    padding: 10px;
+    font-size: 1.4rem;
+    text-align: left;
+}
+.faq-item-x {
+    border: none;
+    border-bottom: 2px dashed var(--white-b);
+}

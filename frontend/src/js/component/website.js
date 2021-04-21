@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Navigation from '@component/navigation'
 import Home from '@component/home'
 import FAQ from '@component/faq'
+import Footer from '@component/footer'
 import '@style/index.css'
 export default class Website extends Component {
     constructor() {
@@ -19,6 +20,7 @@ export default class Website extends Component {
                         <Route path='/' component={Home} />
                     </Switch>
                 </div>
+                {/*<Footer />*/}
             </div>
         )
     }
