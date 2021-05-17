@@ -1,15 +1,18 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { webpack } = require('webpack')
-
+const { ProvidePlugin, DefinePlugin } = require('webpack')
+const { config } = require('dotenv')
+config()
+const PORT = (process.env.PORT) + '0' || 3000
 module.exports = {
-    entry: './src/index.js',
+    entry: './front/index.js',
     devServer: {
-        port: 3000,
+        port: PORT,
         historyApiFallback: true
     },
     output: {
-        path: path.join(__dirname, '../build/static'),
+        path: path.join(__dirname, 'build/static'),
         filename: 'index.js'
     },
     module: {
@@ -28,12 +31,21 @@ module.exports = {
                     'css-loader',
                     'postcss-loader'
                 ]
+            },
+            {
+                test: /\.(woff2|ttf)/,
+                use: [
+                    'url-loader'
+                ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './assets/index.html'
+        }),
+        new DefinePlugin({
+            'process.env': JSON.stringify(process.env)
         })
     ]
 }

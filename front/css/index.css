@@ -8,6 +8,8 @@
     --black-c: #0e0e13;
     --black-d: #202027b4;
     --black-e: #2a2a2eb4;
+    --black-f: #2a2a2e77;
+    --black-g: #151520;
     --gray-a: #868686;
     --white-a: #ffffff;
     --white-b: #f4fAff;
@@ -26,6 +28,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--black-c);
+    font-family: 'Ubuntu';
 }
 body::-webkit-scrollbar {
     width: 7px;
@@ -54,9 +57,21 @@ body::-webkit-scrollbar {
         transform: none;
     }
 }
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 @keyframes jiggle {
     10% { transform: rotate(0deg); }
     33% { transform: rotate(-5deg); }
     66% { transform: rotate(5deg); }
     99% { transform: rotate(0deg); }
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../../assets/font/Ubuntu.ttf');
 }

@@ -38,7 +38,7 @@ export default class FAQ extends Component {
             />,
             <Question key='3' i='3'
                 question='How often will lessons be added/updated?'
-                answer={'Lessons are added and updated on a rolling basis. There are so many things to cover about Linux, so we\'ll be adding more content soon!.'}
+                answer={'Lessons are added and updated on a rolling basis. There are so many things to cover about Linux, so we\'ll be adding more content soon!'}
             />
         ]
         return (
