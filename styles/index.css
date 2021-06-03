@@ -73,5 +73,5 @@ body::-webkit-scrollbar {
 }
 @font-face {
     font-family: 'Ubuntu';
-    src: url('../../assets/font/Ubuntu.ttf');
+    src: url('../assets/font/Ubuntu.ttf');
 }

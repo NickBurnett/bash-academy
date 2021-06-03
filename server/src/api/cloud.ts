@@ -1,13 +1,14 @@
 import { Firestore } from '@google-cloud/firestore'
-import { env } from '../index'
+import { config } from 'dotenv'
+config()
 export class Cloud {
     public firestore: Firestore;
     constructor() {
         this.firestore = new Firestore({
-            projectId: env.PROJECT_ID,
+            projectId: process.env.PROJECT_ID,
             credentials: {
-                client_email: env.USERNAME_FIRESTORE,
-                private_key: env.API_KEY_FIRESTORE
+                client_email: process.env.USERNAME_FIRESTORE,
+                private_key: process.env.API_KEY_FIRESTORE
             }
         })
     }

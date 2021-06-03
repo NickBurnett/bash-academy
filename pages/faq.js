@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import '@style/faqpage.css'
-export class Question extends Component {
+import { Component } from 'react'
+import { withRouter } from 'next/router'
+class Question extends Component {
     constructor() {
         super()
         this.state = {}

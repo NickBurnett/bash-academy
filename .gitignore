@@ -1,9 +1,6 @@
 .env
 package-lock.json
 .vscode
+.next
 build
 node_modules
-frontend/node_modules
-frontend/package-lock.json
-backend/node_modules
-backend/package-lock.json

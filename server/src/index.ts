@@ -5,13 +5,13 @@ import { json } from 'body-parser'
 import path from 'path'
 import { register } from './api/api'
 import { cloud } from './api/cloud'
+import { exit } from 'process'
 
 // Basic server environment setup.
 config()
-export const env = process.env
 
 const app = express()
-const PORT = env.PORT || 3000
+const PORT = process.env.PORT || 3000
 app.use(express.static(path.join(__dirname, 'static')))
 app.use(cors())
 app.use(json())
