@@ -1,4 +1,8 @@
 $nav-bg: #202027;
 $nav-icon-bg-a: #ff6673;
 $nav-icon-bg-b: #ff3c4c;
-$nav-icon-bg: linear-gradient(to bottom right, $nav-icon-bg-a, $nav-icon-bg-b 80%);
+$nav-icon-bg: linear-gradient(
+  to bottom right,
+  $nav-icon-bg-a,
+  $nav-icon-bg-b 80%
+);

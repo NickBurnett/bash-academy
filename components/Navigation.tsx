@@ -4,10 +4,9 @@ import styles from '../styles/component/Navigation.module.scss'
 import { version } from '../package.json'
 
 export default function Navigation() {
-
   return (
     <div id={styles.navigation}>
-      <Link href='/'>
+      <Link href="/">
         <div id={styles.logo}>
           <TerminalSVG />
           <div>v{version}</div>
