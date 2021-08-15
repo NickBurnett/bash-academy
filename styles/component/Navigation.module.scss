@@ -1,0 +1,42 @@
+@use '../index.scss' as index;
+
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 4rem;
+  height: 100vh;
+  background-color: index.$nav-bg;
+  box-shadow: 4px 0 10px -3px #010101;
+
+  #logo {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: index.$nav-icon-bg;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    * {
+      transition: transform 0.15s;
+    }
+    svg {
+      width: 50%;
+    }
+    div {
+      font-weight: 900;
+    }
+    &:hover {
+      * {
+        transform: scale(105%);
+      }
+    }
+  }
+}
