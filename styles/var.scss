@@ -1,0 +1,15 @@
+$accent-0: #ff6673;
+$accent-1: #ff3c4c;
+
+$bg: #0e0e13;
+$highlight-bg: $accent-1;
+
+$nav-bg: #202027;
+$nav-text-bg: #2a2a2eb4;
+$nav-icon-bg-a: $accent-0;
+$nav-icon-bg-b: $accent-1;
+$nav-icon-bg: linear-gradient(
+  to bottom right,
+  $nav-icon-bg-a,
+  $nav-icon-bg-b 80%
+);
